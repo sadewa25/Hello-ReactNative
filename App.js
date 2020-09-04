@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Text, View, Image, TextInput} from 'react-native';
 
 //Component, dan hanya boleh return 1 Induk. 
@@ -15,6 +15,9 @@ const App = () => {
       <Text>Sampal</Text>
 
       <TextInput style={{borderWidth: 1}}/>
+
+      <BoxGreen/>
+      <Profile/>
     </View>
   );
 };
@@ -30,5 +33,25 @@ const Photo = () => {
     style={{width: 100, height: 100}}/>
   );
 };
+
+class BoxGreen extends Component{
+  render(){
+    return <Text>Ini Komponen Class</Text>;
+  }
+}
+
+class Profile extends Component{
+  render(){
+    return (
+      <View>
+        <Image source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1024px-Circle-icons-profile.svg.png'}}
+      style={{width: 100, height: 100}} />
+        <Text>
+          Ini Foto Profile GJ
+        </Text>
+      </View>
+    );
+  }
+}
 
 export default App;
