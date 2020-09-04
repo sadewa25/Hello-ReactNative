@@ -3,6 +3,7 @@ import {View, ScrollView} from 'react-native';
 import {SampleComponent} from './SampleComponent';
 import StylingReactNativeComponent from './StylingReactNativeComponent';
 import MateriFlexBox from "./MateriFlexBox";
+import PositioningReactNatice from './PositionReactNative'
 
 //Component, dan hanya boleh return 1 Induk. 
 const App = () => {
@@ -11,7 +12,8 @@ const App = () => {
       <ScrollView>
         {/* <SampleComponent/>
         <StylingReactNativeComponent/> */}
-        <MateriFlexBox/>
+        {/* <MateriFlexBox/> */}
+        <PositioningReactNatice/>
       </ScrollView>
     </View>
   );
