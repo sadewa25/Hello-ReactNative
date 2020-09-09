@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View, Image, TextInput, StyleSheet} from 'react-native';
 
-const StylingReactNativeComponent = () => {
+const StylingComponent = () => {
     return (
       <View>
         <Text style={styles.text}>Styling Object</Text>
@@ -39,4 +39,4 @@ const StylingReactNativeComponent = () => {
     }
   });
 
-export default StylingReactNativeComponent;
+export default StylingComponent;

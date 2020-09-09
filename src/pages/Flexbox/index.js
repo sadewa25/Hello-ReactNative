@@ -1,8 +1,35 @@
-import React, {Component} from 'react';
+import React, {Component} from './../../../node_modules/react';
 import {Text, View, Image, TextInput} from 'react-native';
 
-class MateriFlexBox extends Component{
+class Flexbox extends Component{
+
+    constructor(props){
+        super(props)
+        console.log('==> Constructor')
+        this.state = {
+            subscriber: 100,
+        }
+    }
+
+    componentDidMount(){
+        console.log('==> Compononent Mounting');
+        setTimeout(() => {
+            this.setState({
+                subscriber: 400,
+            })
+        }, 2000);
+    }
+
+    componentDidUpdate(){
+        console.log('==> Component Update');
+    }
+
+    componentWillUnmount(){
+        console.log('==> Component Will unmount')
+    }
+
     render(){
+        console.log('==> Render');
         return (
             <View>
                 <View style={{
@@ -28,9 +55,11 @@ class MateriFlexBox extends Component{
                     <View style={{backgroundColor: '#4fc3f7', width:50, height: 150}}/>
                     <View style={{backgroundColor: '#aed581', width:50, height: 200}}/>
                 </View>
+            <Text>{this.state.subscriber}</Text>
+
             </View>
         );
     }
 }
 
-export default MateriFlexBox;
+export default Flexbox;
